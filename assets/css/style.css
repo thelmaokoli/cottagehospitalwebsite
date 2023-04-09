@@ -448,6 +448,7 @@ h6 {
   font-size: 22px;
 }
 #hero .icon-boxes {
+
   margin-top: 2em;
   margin-bottom: 4em;
 }
@@ -501,7 +502,7 @@ h6 {
 #hero img{
   height: 30em;
   margin-top: 5em;
-  max-width: 65%;
+  max-width: 30em;
 }
 
 @media (min-width: 1024px) {
@@ -531,6 +532,16 @@ h6 {
     line-height: 24px;
   }
 }
+
+
+@media (max-width: 750px){
+  #hero .icon-boxes {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+  }
+}
+
 
 @media (min-width: 992px) {
   #hero .container{
@@ -803,7 +814,6 @@ section {
 
 #testimonials{
   height: 70vh;
-  margin-left: 4em;
 }
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -891,6 +901,14 @@ section {
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #2487ce;
+}
+
+@media (max-width: 991px) {
+#testimonials{
+  margin-bottom: 8em;
+}
+
+
 }
 
 /*--------------------------------------------------------------
