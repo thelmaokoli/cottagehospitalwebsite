@@ -370,7 +370,7 @@ h6 {
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
-  margin: 15px;
+  
 }
 
 .navbar-mobile .dropdown ul {
@@ -500,7 +500,7 @@ h6 {
 }
 
 #hero img{
-  height: 30em;
+  height: 26em;
   margin-top: 5em;
   max-width: 30em;
 }
@@ -1591,7 +1591,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #113d06;
+  background: #113d06 !important;
   display: flex;
   justify-content: center;
   align-items: center;
