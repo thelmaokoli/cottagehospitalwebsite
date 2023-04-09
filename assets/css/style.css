@@ -905,7 +905,7 @@ section {
 
 @media (max-width: 991px) {
 #testimonials{
-  margin-bottom: 8em;
+  margin-bottom: 11em;
 }
 
 
@@ -1114,7 +1114,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #2487ce;
+  color: #cfdce62d;
 }
 
 .portfolio #portfolio-flters li:last-child {
