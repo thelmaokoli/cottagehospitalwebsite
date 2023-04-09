@@ -813,7 +813,7 @@ section {
 --------------------------------------------------------------*/
 
 #testimonials{
-  height: 70vh;
+  height: 89vh;
 }
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -1130,7 +1130,7 @@ section {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(36, 135, 206, 0.6);
+  background: rgba(253, 253, 253, 0.096);
   position: absolute;
   left: 30px;
   right: 30px;
