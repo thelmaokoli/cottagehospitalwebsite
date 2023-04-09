@@ -803,6 +803,7 @@ section {
 
 #testimonials{
   height: 70vh;
+  margin-left: 4em;
 }
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
