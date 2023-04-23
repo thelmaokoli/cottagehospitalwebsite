@@ -18,6 +18,12 @@
 .dark-green {
 background-color: #001a00;
 }
+.yellow{
+  color: yellow !important;
+}
+.sun{
+  color: rgb(250, 215, 17) !important;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -174,6 +180,8 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
+
 /**
 * Desktop Navigation 
 */
@@ -407,6 +415,24 @@ h6 {
   display: block;
 }
 
+/*--------------------------------------------------------------
+# vacancy Section
+--------------------------------------------------------------*/
+.vacancies{
+  text-align: center;
+  font-size: 2.5em; 
+  max-width: 75%;
+}
+
+.flyer-link{
+  background-color: #1e6ca6;
+  color: white;
+  font-style: italic;
+}
+
+.red{
+  color: red;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
