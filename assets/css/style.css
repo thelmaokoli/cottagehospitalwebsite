@@ -419,9 +419,10 @@ h6 {
 # vacancy Section
 --------------------------------------------------------------*/
 .vacancies{
+  margin: auto;
   text-align: center;
   font-size: 2.5em; 
-  max-width: 75%;
+  max-width: 65%;
 }
 
 .flyer-link{
