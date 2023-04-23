@@ -20,9 +20,15 @@ background-color: #001a00;
 }
 .yellow{
   color: yellow !important;
+  background-color: #e5e7dd;
 }
 .sun{
   color: rgb(247, 161, 48) !important;
+}
+
+.peak{
+  color:#066e37 !important;
+  background-color: #c7cccc !important;
 }
 
 body {
