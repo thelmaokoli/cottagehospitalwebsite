@@ -10,7 +10,18 @@
 # General
 --------------------------------------------------------------*/
 *{
-}.baby{
+}
+@media only screen
+and (max-width: 1069px) {
+  .baby{
+  max-width: 20vh;
+}
+
+  .l-image{
+    max-width: 75vw;
+  }
+}
+.baby{
   max-height: 30vh;
 }
 
