@@ -139,3 +139,206 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+
+/**
+https://replit.com/@thelmaijemma/grid-templates#style.css
+
+ANIMATIONS SITE: 
+https://www.youtube.com/watch?v=lOAk7-bPyMk
+
+TAILWINDS
+https://www.youtube.com/watch?v=pfaSUYaSgRo
+
+**/
+.cardy {
+  height: 100%;
+  width: 100%;
+}
+
+
+.cardy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background: black;
+    font-size: 3rem;
+    color: white;
+    max-height: 70vh;
+    border-radius: 5px;
+    transition: all 500ms;
+    overflow: hidden;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cardy:hover {
+    box-shadow: black 0px 0.4em 1em, blue 0px 0.2em 0.5em;
+    transform: translateY(-5px) scale(1.4);
+}
+    
+    .grid{
+        display: grid;
+        gap: 1rem; 
+        
+       /** 1 fractional unit 
+        in one column, this is 100% width 
+        grid-template-columns: 1fr;
+        
+        this would be 25%: 
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+        **/ 
+       
+        
+        /** INSTEAD OF
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        
+        grid-template-columns: repeat(12, ifr);
+        = 12 cramped columns
+        
+        to make columns less cramped (but run off page)
+        grid-template-columns: repeat(12, minmax(240px, 1fr));  
+        **/
+       
+        /** final - column nummber = variable/ auto **/
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /** AUTO-FILL alt: if you don't want max width columns **/
+
+      /**  grid-auto-rows: 240px; **/
+        
+}
+
+.gallery-mosaic-grid{
+    /** right now auto height is the height of the numbers <div>1</div>, but we have a property we can use): GRID-AUTO-ROWS**/
+    display: grid;
+    gap: 1rem;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 240px;
+}
+
+
+/** these mosaic properties look ugly on a narrow screen so m q needed) **/
+@media screen and (min-width: 600px){
+.nba-photo{
+    /** start / end **/
+    
+    grid-row: 1 / 4;
+    /** start at hor line 1 and end at hor line 4 **/
+}
+
+
+.mid-photo{
+    /** start wherever, span 2 rows tal, and end wherever **/
+        grid-row: span 2 / auto;
+}
+
+.thick-photo{
+    grid-column: span 2/ auto;
+}
+}
+
+.moving-grid{
+height: 80vh;
+  margin-bottom: 10vh;
+
+display: grid;
+  gap: 1rem;
+
+  /** explicit grid technique **/
+  grid-template-areas:
+    'a b c d'
+  'l z z e'
+  'k z z f'
+  'j i h g';
+
+  grid-template-rows: repeat(4, 25%);
+  /** 4 rowa, each 25% of height **/
+
+
+   grid-template-columns: 250px auto auto 250px;
+
+
+  /** FOR FUN - STAGGER LOAD **/
+  --stagger-delay: 100ms;
+}
+
+/** MORE FUN - KEYFRAMES **/
+@keyframes card-emerge{
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+    filter: hue-rotate(180deg);
+  } to{
+     opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+/** ANIMATED GRID **/
+.moving-grid .card{
+  background-color: rgb(35, 240, 140); 
+  
+  /** keyframe + duration + behavior**/
+  animation: card-emerge 800ms ease-out; 
+
+  /** start animation at "to" with opacity = 0, so animation is not visible before it starts **/
+  animation-fill-mode: backwards;
+}
+
+  .moving-grid .cardy:nth-child(1){
+    grid-area: a;
+    animation-delay: calc(1 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(2){
+    grid-area: b;
+    animation-delay: calc(2 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(3){
+    grid-area: c;
+    animation-delay: calc(3 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(4){
+    grid-area: d;
+    animation-delay: calc(4 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(5){
+    grid-area: e;
+    animation-delay: calc(5 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(6){
+    grid-area: f;
+    animation-delay: calc(6 * var(--stagger-delay));
+  }
+    .moving-grid .card:nth-child(7){
+    grid-area: g;
+    animation-delay: calc(7 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(8){
+    grid-area: h;
+    animation-delay: calc(8 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(9){
+    grid-area: i;
+    animation-delay: calc(9 * var(--stagger-delay));
+  }
+    .moving-grid .cardy:nth-child(10){
+    grid-area: j;
+    animation-delay: calc(10 * var(--stagger-delay));
+  }  
+
+    .moving-grid .cardy:nth-child(11){
+    grid-area: k;
+    animation-delay: calc(11 * var(--stagger-delay));
+  }  
+    .moving-grid .cardy:nth-child(12){
+    grid-area: l;
+    animation-delay: calc(12 * var(--stagger-delay));
+  }
+  .moving-grid .cardy:last-child{
+    grid-area: z;
+    animation-delay: calc(13 * var(--stagger-delay));
+  }
